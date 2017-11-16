@@ -26,6 +26,16 @@
                         <artifactId>junit-platform-surefire-provider</artifactId>
                         <version>1.0.2</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.junit.jupiter</groupId>
+                        <artifactId>junit-jupiter-engine</artifactId>
+                        <version>5.0.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.junit.vintage</groupId>
+                        <artifactId>junit-vintage-engine</artifactId>
+                        <version>4.12.2</version>
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
@@ -53,18 +63,6 @@
             <scope>test</scope>
         </dependency>
 -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.0.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>4.12.2</version>
-            <scope>test</scope>
-        </dependency>
         <!--Get rid of compiler warnings about org.apiguardian.api.API-->
         <dependency>
             <groupId>org.apiguardian</groupId>

@@ -54,7 +54,7 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <!--Only needed in an IDE that bundles an old version-->
+        <!--Only needed to run tests in an IntelliJ IDEA that bundles an older version-->
 <!--
         <dependency>
             <groupId>org.junit.platform</groupId>

@@ -1,9 +1,9 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.assumptions;
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 
-class AssumptionTest {
+class JUnit5AssumptionTest {
 
     @Test
     void shouldOnlyRunInDevelopmentEnvironment() {

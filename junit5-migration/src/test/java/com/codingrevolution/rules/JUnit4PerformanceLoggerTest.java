@@ -1,9 +1,9 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.rules;
 
 import org.junit.Rule;
 import org.junit.Test;
 
-public class PerformanceLoggerTest {
+public class JUnit4PerformanceLoggerTest {
 
     @Rule
     public PerformanceLoggerRule logger = new PerformanceLoggerRule();

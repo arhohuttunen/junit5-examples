@@ -1,8 +1,8 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.annotations;
 
 import org.junit.Test;
 
-public class TimeoutTest {
+public class JUnit4TimeoutTest {
 
     @Test(timeout = 1)
     public void shouldTimeout() throws InterruptedException {

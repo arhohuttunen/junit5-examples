@@ -1,9 +1,9 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.assumptions;
 
 import org.junit.Assume;
 import org.junit.Test;
 
-public class AssumptionTest {
+public class JUnit4AssumptionTest {
 
     @Test
     public void shouldOnlyRunInDevelopmentEnvironment() {

@@ -1,4 +1,4 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.rules;
 
 import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;

@@ -1,9 +1,9 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.assertions;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class AssertionTest {
+class JUnit5AssertionTest {
 
     @Test
     void shouldFailWithMessage() {

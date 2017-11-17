@@ -1,8 +1,8 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.annotations;
 
 import org.junit.Test;
 
-public class ExceptionTest {
+public class JUnit4ExceptionTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowAnException() {

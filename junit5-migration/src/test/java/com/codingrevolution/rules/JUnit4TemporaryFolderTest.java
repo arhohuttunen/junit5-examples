@@ -1,4 +1,4 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.rules;
 
 import org.junit.Assert;
 import org.junit.Rule;
@@ -8,7 +8,7 @@ import org.junit.rules.TemporaryFolder;
 import java.io.File;
 import java.io.IOException;
 
-public class TemporaryFolderTest {
+public class JUnit4TemporaryFolderTest {
 
     @Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();

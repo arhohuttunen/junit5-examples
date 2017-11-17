@@ -1,16 +1,18 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.rules;
 
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.migrationsupport.rules.EnableRuleMigrationSupport;
 import org.junit.rules.ExpectedException;
 
-public class ExpectedExceptionTest {
+@EnableRuleMigrationSupport
+class JUnit5ExpectedExceptionTest {
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
     @Test
-    public void shouldThrowExceptionWithMessage() {
+    void shouldThrowExceptionWithMessage() {
         thrown.expectMessage("Wrong argument");
 
         throw new IllegalArgumentException("Wrong argument!");

@@ -1,9 +1,9 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.annotations;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class ExceptionTest {
+class JUnit5ExceptionTest {
 
     @Test
     void shouldThrowAnException() {

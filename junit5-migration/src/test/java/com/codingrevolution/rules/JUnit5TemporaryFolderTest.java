@@ -1,4 +1,4 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.rules;
 
 import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 @EnableRuleMigrationSupport
-class TemporaryFolderTest {
+class JUnit5TemporaryFolderTest {
 
     @Rule
     public TemporaryFolder temporaryFolder = new TemporaryFolder();

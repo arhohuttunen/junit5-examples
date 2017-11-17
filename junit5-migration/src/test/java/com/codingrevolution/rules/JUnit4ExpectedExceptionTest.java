@@ -1,12 +1,10 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.rules;
 
 import org.junit.Rule;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.migrationsupport.rules.EnableRuleMigrationSupport;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-@EnableRuleMigrationSupport
-public class ExpectedExceptionTest {
+public class JUnit4ExpectedExceptionTest {
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();

@@ -1,9 +1,9 @@
-package com.codingrevolution.junit4;
+package com.codingrevolution.assertions;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AssertionTest {
+public class JUnit4AssertionTest {
 
     @Test
     public void shouldFailWithMessage() {

@@ -1,11 +1,11 @@
-package com.codingrevolution.junit5;
+package com.codingrevolution.annotations;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 
-class TimeoutTest {
+class JUnit5TimeoutTest {
 
     @Test
     void shouldTimeout() {

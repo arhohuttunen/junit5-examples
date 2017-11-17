@@ -48,6 +48,12 @@
             <version>5.0.2</version>
             <scope>test</scope>
         </dependency>
+        <!--Needed for supporting a subset of JUnit 4 rules-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-migrationsupport</artifactId>
+            <version>5.0.2</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

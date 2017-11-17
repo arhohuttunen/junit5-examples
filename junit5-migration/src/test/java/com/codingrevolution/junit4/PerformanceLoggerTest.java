@@ -6,7 +6,7 @@ import org.junit.Test;
 public class PerformanceLoggerTest {
 
     @Rule
-    public PerformanceLoggerRule classLogger = new PerformanceLoggerRule();
+    public PerformanceLoggerRule logger = new PerformanceLoggerRule();
 
     @Test
     public void shouldLogPerformance() throws InterruptedException {

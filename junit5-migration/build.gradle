@@ -19,6 +19,15 @@ repositories {
     mavenCentral()
 }
 
+junitPlatform {
+    filters {
+        tags {
+            // include 'acceptance'
+            exclude 'integration'
+        }
+    }
+}
+
 dependencies {
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.2'
     // Needed for supporting a subset of JUnit 4 rules

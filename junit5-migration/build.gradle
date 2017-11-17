@@ -30,4 +30,6 @@ dependencies {
     testRuntime group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '4.12.2'
     // Get rid of compiler warnings about org.apiguardian.api.API
     testCompileOnly group: 'org.apiguardian', name: 'apiguardian-api', version: '1.0.0'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.0.1.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-test', version: '5.0.1.RELEASE'
 }

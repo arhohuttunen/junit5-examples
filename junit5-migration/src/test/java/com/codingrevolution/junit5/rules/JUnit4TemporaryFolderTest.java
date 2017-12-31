@@ -1,4 +1,4 @@
-package com.codingrevolution.rules;
+package com.codingrevolution.junit5.rules;
 
 import org.junit.Assert;
 import org.junit.Rule;

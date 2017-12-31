@@ -1,4 +1,4 @@
-package com.codingrevolution.categories;
+package com.codingrevolution.junit5.categories;
 
 import org.junit.Assert;
 import org.junit.Test;

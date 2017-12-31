@@ -1,4 +1,4 @@
-package com.codingrevolution.assumptions;
+package com.codingrevolution.junit5.assumptions;
 
 import org.junit.Assume;
 import org.junit.Test;

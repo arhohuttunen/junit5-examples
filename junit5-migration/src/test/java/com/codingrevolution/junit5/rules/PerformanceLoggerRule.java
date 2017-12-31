@@ -1,4 +1,4 @@
-package com.codingrevolution.rules;
+package com.codingrevolution.junit5.rules;
 
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;

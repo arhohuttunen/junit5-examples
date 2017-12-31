@@ -1,6 +1,5 @@
-package com.codingrevolution.rules;
+package com.codingrevolution.junit5.rules;
 
-import com.codingrevolution.rules.PerformanceLoggerExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 

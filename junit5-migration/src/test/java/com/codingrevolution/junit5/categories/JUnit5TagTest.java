@@ -1,4 +1,4 @@
-package com.codingrevolution.categories;
+package com.codingrevolution.junit5.categories;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;

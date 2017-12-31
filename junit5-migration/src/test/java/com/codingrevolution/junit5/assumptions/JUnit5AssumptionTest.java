@@ -1,4 +1,4 @@
-package com.codingrevolution.assumptions;
+package com.codingrevolution.junit5.assumptions;
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;

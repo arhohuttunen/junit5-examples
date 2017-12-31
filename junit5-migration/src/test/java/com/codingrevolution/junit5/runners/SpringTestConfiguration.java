@@ -1,4 +1,4 @@
-package com.codingrevolution.runners;
+package com.codingrevolution.junit5.runners;
 
 import org.springframework.context.annotation.Configuration;
 

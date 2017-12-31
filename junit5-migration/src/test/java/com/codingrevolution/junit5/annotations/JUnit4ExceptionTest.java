@@ -1,4 +1,4 @@
-package com.codingrevolution.annotations;
+package com.codingrevolution.junit5.annotations;
 
 import org.junit.Test;
 

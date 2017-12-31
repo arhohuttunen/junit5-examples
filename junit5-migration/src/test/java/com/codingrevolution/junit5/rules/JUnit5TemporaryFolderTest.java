@@ -1,4 +1,4 @@
-package com.codingrevolution.rules;
+package com.codingrevolution.junit5.rules;
 
 import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;

@@ -9,8 +9,12 @@ public class ValueSourceParameterTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "racecar", "radar", "able was I ere I saw elba" })
-    void palindromeReadsSameBackward(String palindrome) {
-        Assertions.assertEquals(palindrome, new StringBuilder(palindrome).reverse().toString());
+    void palindromeReadsSameBackward(String string) {
+        Assertions.assertEquals(string, isPalindrome(string));
+    }
+
+    private String isPalindrome(String string) {
+        return new StringBuilder(string).reverse().toString();
     }
 
     @ParameterizedTest

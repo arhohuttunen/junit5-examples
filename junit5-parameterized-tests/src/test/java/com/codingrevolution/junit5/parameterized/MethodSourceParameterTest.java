@@ -11,8 +11,12 @@ public class MethodSourceParameterTest {
 
     @ParameterizedTest
     @MethodSource("palindromes")
-    void palindromeReadsSameBackward(String palindrome) {
-        Assertions.assertEquals(palindrome, new StringBuilder(palindrome).reverse().toString());
+    void palindromeReadsSameBackward(String string) {
+        Assertions.assertEquals(string, isPalindrome(string));
+    }
+
+    private String isPalindrome(String string) {
+        return new StringBuilder(string).reverse().toString();
     }
 
     private static Stream<String> palindromes() {

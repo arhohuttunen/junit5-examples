@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class MethodSourceParameterTest {
 
     @ParameterizedTest
-    @MethodSource("palindromes")
+    @MethodSource("palindromesProvider")
     void palindromeReadsSameBackward(String string) {
         Assertions.assertEquals(string, isPalindrome(string));
     }
@@ -19,11 +19,11 @@ public class MethodSourceParameterTest {
         return new StringBuilder(string).reverse().toString();
     }
 
-    private static Stream<String> palindromes() {
+    private static Stream<String> palindromesProvider() {
         return Stream.of("racecar", "radar", "able was I ere I saw elba");
     }
 
-    @ParameterizedTest(name = "arabic={0}, roman={1}")
+    @ParameterizedTest(name = "{index} => arabic={0}, roman={1}")
     @MethodSource("arabicToRomanProvider")
     void convertArabicToRomanNumeral(int arabic, String roman) {
         Assertions.assertEquals(roman, new RomanNumeral(arabic).toString());

@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class CsvFileSourceParameterTest {
 
-    @ParameterizedTest(name = "arabic={0}, roman={1}")
+    @ParameterizedTest(name = "{index} => arabic={0}, roman={1}")
     @CsvFileSource(resources = "/roman-numeral.csv")
     void convertArabicToRomanNumeral(int arabic, String roman) {
         Assertions.assertEquals(roman, new RomanNumeral(arabic).toString());

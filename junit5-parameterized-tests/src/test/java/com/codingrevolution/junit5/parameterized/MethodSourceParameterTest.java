@@ -1,18 +1,19 @@
 package com.codingrevolution.junit5.parameterized;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class MethodSourceParameterTest {
 
     @ParameterizedTest
     @MethodSource("palindromesProvider")
     void palindromeReadsSameBackward(String string) {
-        Assertions.assertEquals(string, isPalindrome(string));
+        assertEquals(string, isPalindrome(string));
     }
 
     private String isPalindrome(String string) {
@@ -26,7 +27,7 @@ public class MethodSourceParameterTest {
     @ParameterizedTest(name = "{index} => arabic={0}, roman={1}")
     @MethodSource("arabicToRomanProvider")
     void convertArabicToRomanNumeral(int arabic, String roman) {
-        Assertions.assertEquals(roman, new RomanNumeral(arabic).toString());
+        assertEquals(roman, new RomanNumeral(arabic).toString());
     }
 
     private static Stream<Arguments> arabicToRomanProvider() {

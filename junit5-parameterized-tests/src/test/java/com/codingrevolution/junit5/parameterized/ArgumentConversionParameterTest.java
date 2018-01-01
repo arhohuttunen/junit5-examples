@@ -1,6 +1,5 @@
 package com.codingrevolution.junit5.parameterized;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.converter.JavaTimeConversionPattern;
@@ -11,25 +10,27 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.concurrent.TimeUnit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class ArgumentConversionParameterTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "SECONDS", "MINUTES" })
     void convertStringToEnum(TimeUnit timeUnit) {
-        Assertions.assertNotNull(timeUnit);
+        assertNotNull(timeUnit);
     }
 
     @ParameterizedTest
     @ValueSource(strings = { "2018-01-01", "2018-01-31" })
     void convertStringToLocalDate(LocalDate localDate) {
-        Assertions.assertEquals(Month.JANUARY, localDate.getMonth());
+        assertEquals(Month.JANUARY, localDate.getMonth());
     }
 
     @ParameterizedTest
     @ValueSource(strings = { "01.01.2018", "31.01.2018" })
-    void convertStringToLocalDateWithConversionPattern(
-            @JavaTimeConversionPattern("dd.MM.yyyy") LocalDate localDate) {
-        Assertions.assertEquals(2018, localDate.getYear());
+    void convertStringToLocalDateWithConversionPattern(@JavaTimeConversionPattern("dd.MM.yyyy") LocalDate localDate) {
+        assertEquals(2018, localDate.getYear());
     }
 
     @ParameterizedTest
@@ -39,7 +40,7 @@ public class ArgumentConversionParameterTest {
             "233, E9"
     })
     void convertWithCustomHexConverter(int expected, @ConvertWith(HexConverter.class) int actual) {
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @ParameterizedTest
@@ -49,6 +50,6 @@ public class ArgumentConversionParameterTest {
             "256, 100"
     })
     void convertWithCustomHexValueAnnotation(int expected, @HexValue int actual) {
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 }

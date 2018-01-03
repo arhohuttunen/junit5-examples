@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CsvFileSourceParameterTest {
+class CsvFileSourceParameterTest {
 
     @ParameterizedTest(name = "{index} => arabic={0}, roman={1}")
     @CsvFileSource(resources = "/roman-numeral.csv")

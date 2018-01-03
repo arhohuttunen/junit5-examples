@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ValueSourceParameterTest {
+class ValueSourceParameterTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "racecar", "radar", "able was I ere I saw elba" })

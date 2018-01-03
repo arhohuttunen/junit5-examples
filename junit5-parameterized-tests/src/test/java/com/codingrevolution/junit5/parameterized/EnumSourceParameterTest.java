@@ -3,7 +3,7 @@ package com.codingrevolution.junit5.parameterized;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
-public class EnumSourceParameterTest {
+class EnumSourceParameterTest {
 
     private WebServer webServer = new WebServer();
 

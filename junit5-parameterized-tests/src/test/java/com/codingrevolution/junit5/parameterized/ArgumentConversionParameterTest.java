@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class ArgumentConversionParameterTest {
+class ArgumentConversionParameterTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "SECONDS", "MINUTES" })

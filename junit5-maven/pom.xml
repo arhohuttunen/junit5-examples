@@ -43,11 +43,6 @@
             <version>5.0.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apiguardian</groupId>
-            <artifactId>apiguardian-api</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 
 </project>

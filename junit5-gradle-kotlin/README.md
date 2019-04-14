@@ -1,4 +1,4 @@
-# JUnit 5 wtih Kotlin
+# JUnit 5 with Kotlin
 
 This is the accompanying source code for the article [JUnit 5 with Kotlin](http://www.codingrevolution.com/junit-5-kotlin/).
 

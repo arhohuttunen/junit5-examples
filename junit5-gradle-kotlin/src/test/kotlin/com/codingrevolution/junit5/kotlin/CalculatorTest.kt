@@ -11,7 +11,9 @@ class CalculatorTest {
 
     @Test
     fun `1 + 2 = 3`() {
-        assertEquals(3, calculator.add(1, 2))
+        assertEquals(3, calculator.add(1, 2)) {
+            "1 + 1 should equal 3"
+        }
     }
 
     @Test

@@ -10,8 +10,8 @@ class ArrayEqualityAssertion {
 
     @Test
     void arraysEqual() {
-        final int[] expected = { 1, 2, 3 };
         final int[] array = { 3, 2, 1 };
+        final int[] expected = { 1, 2, 3 };
 
         Arrays.sort(array);
 

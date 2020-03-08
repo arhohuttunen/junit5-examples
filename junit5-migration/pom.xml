@@ -21,10 +21,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <properties>
-                        <!--<includeTags>acceptance</includeTags>-->
-                        <excludeTags>integration</excludeTags>
-                    </properties>
+                    <!--<groups>acceptance</groups>-->
+                    <excludedGroups>integration</excludedGroups>
                 </configuration>
             </plugin>
         </plugins>

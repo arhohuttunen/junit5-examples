@@ -7,6 +7,6 @@ public class JUnit4AssertionTest {
 
     @Test
     public void shouldFailWithMessage() {
-        Assert.assertTrue("numbers " + 1 + " and " + 2 + " are not equal", 1 == 2);
+        Assert.assertEquals("numbers " + 1 + " and " + 2 + " are not equal", 1, 2);
     }
 }

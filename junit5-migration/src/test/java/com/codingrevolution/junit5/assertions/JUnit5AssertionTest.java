@@ -7,7 +7,6 @@ class JUnit5AssertionTest {
 
     @Test
     void shouldFailWithMessage() {
-        Assertions.assertTrue(1 == 2,
-                () -> "numbers " + 1 + " and " + 2 + " are not equal");
+        Assertions.assertEquals(1, 2, () -> "numbers " + 1 + " and " + 2 + " are not equal");
     }
 }

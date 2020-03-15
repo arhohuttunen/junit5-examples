@@ -7,11 +7,11 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 public class ExtensionOne implements BeforeEachCallback, AfterEachCallback {
     @Override
     public void beforeEach(ExtensionContext context) {
-        System.out.println("Before each from " + this.getClass().getSimpleName());
+        System.out.println("Before each from ExtensionOne");
     }
 
     @Override
     public void afterEach(ExtensionContext context) {
-        System.out.println("After each from " + this.getClass().getSimpleName());
+        System.out.println("After each from ExtensionOne");
     }
 }

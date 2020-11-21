@@ -1,5 +1,6 @@
 package com.codingrevolution.junit5.assertions;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -18,6 +19,7 @@ class TimeoutAssertion {
     }
 
     @Test
+    @Disabled("This would fail the build, so the test is ignored")
     void abortWhenTimeoutExceeded() {
         final String message = assertTimeoutPreemptively(Duration.ofMillis(50), () -> {
             Thread.sleep(100);

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.codingrevolution</groupId>
-    <artifactId>junit5-getting-stareted</artifactId>
+    <artifactId>junit5-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

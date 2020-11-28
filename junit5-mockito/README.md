@@ -7,4 +7,4 @@ These examples demonstrate how to:
 - Create mocks manually, being independent of JUnit version (or any other framework)
 - Create mocks with the `@Mock` annotation, along with `MockitoAnnotations.openMocks()`
 - Use the `MockitoExtension` to initialize the mocks
-- Use the `@InjectMocks` annotation in case where setter or property injection is needed
+- Use the `@InjectMocks` annotation to simplify the setup further

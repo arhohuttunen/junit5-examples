@@ -9,7 +9,7 @@ This example demonstrates how to assert that:
 - a value is true or false
 - arrays or iterables are equal
 - objects are same by value or reference
-- an exception is thrown
+- the code throws an exception
 - the test running time does not exceed a value
 
-In addition, it will show how to provide a custom error message when an expectation is not met. Furthermore, it will show how several conditions are grouped and reported together.
+In addition, it will show how to provide a custom error message when on assertion failure. Furthermore, it will show how to group and report several conditions together.

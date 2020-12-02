@@ -32,8 +32,9 @@ public class MockitoAnnotationTest {
 
     @Test
     void createOrderSetsTheCreationDate() {
-        Order order = new Order();
         when(orderRepository.save(any(Order.class))).then(returnsFirstArg());
+
+        Order order = new Order();
 
         Order savedOrder = orderService.create(order);
 

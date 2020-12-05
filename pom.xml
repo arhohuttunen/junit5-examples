@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>junit5-getting-started</module>
         <module>junit5-maven</module>
         <module>junit5-migration</module>
         <module>junit5-nested-tests</module>
         <module>junit5-parameterized-tests</module>
-        <module>junit5-starter</module>
     </modules>
 
 </project>

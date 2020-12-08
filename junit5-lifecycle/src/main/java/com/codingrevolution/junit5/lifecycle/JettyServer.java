@@ -3,7 +3,7 @@ package com.codingrevolution.junit5.lifecycle;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
-import org.eclipse.jetty.servlet.ServletHandler;
+import org.eclipse.jetty.servlet.ServletContextHandler;
 
 public class JettyServer {
     private Server server;
@@ -15,9 +15,10 @@ public class JettyServer {
         connector.setPort(8080);
         server.setConnectors(new Connector[] { connector });
 
-        ServletHandler servletHandler = new ServletHandler();
-        servletHandler.addServletWithMapping(JettyServlet.class, "/status");
-        server.setHandler(servletHandler);
+        ServletContextHandler context = new ServletContextHandler();
+        context.setContextPath("/");
+        context.addServlet(JettyServlet.class, "/status");
+        server.setHandler(context);
 
         server.start();
     }

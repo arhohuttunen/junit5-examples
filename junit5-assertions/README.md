@@ -1,6 +1,6 @@
 # JUnit 5 Assertions: Verifying Test Results
 
-This is the accompanying source code for the article [JUnit 5 Assertions: Verifying Test Results](http://www.codingrevolution.com/junit-5-assertions/).
+This is the accompanying source code for the article [JUnit 5 Assertions: Verifying Test Results](http://www.arhohuttunen.com/junit-5-assertions/).
 
 This example demonstrates how to assert that:
 

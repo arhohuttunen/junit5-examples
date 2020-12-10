@@ -1,6 +1,6 @@
 # JUnit 5 Maven Example: Running Tests with Surefire
 
-This is the accompanying source code for the article [JUnit 5 Maven Example: Running Tests with Surefire](http://www.codingrevolution.com/junit-5-maven-example/).
+This is the accompanying source code for the article [JUnit 5 Maven Example: Running Tests with Surefire](http://www.arhohuttunen.com/junit-5-maven-example/).
 
 This example demonstrates how to:
 

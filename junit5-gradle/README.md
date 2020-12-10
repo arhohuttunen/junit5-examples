@@ -1,6 +1,6 @@
 # JUnit 5 Gradle Example: Running Tests with Gradle
 
-This is the accompanying source code for the article [JUnit 5 Gradle Example: Running Tests with Gradle](http://www.codingrevolution.com/junit-5-gradle-example/).
+This is the accompanying source code for the article [JUnit 5 Gradle Example: Running Tests with Gradle](http://www.arhohuttunen.com/junit-5-gradle-example/).
 
 This example demonstrates how to:
 

@@ -1,6 +1,6 @@
 # Migrating from JUnit 4 to JUnit 5: A Definitive Guide
 
-This is the accompanying source code for the article [Migrating from JUnit 4 to JUnit 5: A Definitive Guide](http://www.codingrevolution.com/junit-5-migration/).
+This is the accompanying source code for the article [Migrating from JUnit 4 to JUnit 5: A Definitive Guide](http://www.arhohuttunen.com/junit-5-migration/).
 
 These examples demonstrate how to:
 

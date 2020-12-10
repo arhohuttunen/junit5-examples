@@ -1,6 +1,6 @@
 # JUnit 5 Parameterized Tests: Using Different Input
 
-This is the accompanying source code for the article [JUnit 5 Parameterized Tests: Using Different Input](http://www.codingrevolution.com/junit-5-parameterized-tests/).
+This is the accompanying source code for the article [JUnit 5 Parameterized Tests: Using Different Input](http://www.arhohuttunen.com/junit-5-parameterized-tests/).
 
 These examples demonstrate how to:
 

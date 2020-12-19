@@ -39,8 +39,8 @@ class ArgumentConversionParameterTest {
             "16, 10",
             "233, E9"
     })
-    void convertWithCustomHexConverter(int expected, @ConvertWith(HexConverter.class) Integer actual) {
-        assertEquals(expected, actual);
+    void convertWithCustomHexConverter(int decimal, @ConvertWith(HexConverter.class) Integer hex) {
+        assertEquals(decimal, hex);
     }
 
     @ParameterizedTest
@@ -49,7 +49,7 @@ class ArgumentConversionParameterTest {
             "31, 1F",
             "256, 100"
     })
-    void convertWithCustomHexValueAnnotation(int expected, @HexValue Integer actual) {
-        assertEquals(expected, actual);
+    void convertWithCustomHexValueAnnotation(int decimal, @HexValue Integer hex) {
+        assertEquals(decimal, hex);
     }
 }

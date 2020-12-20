@@ -11,13 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ValueSourceParameterTest {
 
     @ParameterizedTest
-    @ValueSource(strings = { "racecar", "radar", "able was I ere I saw elba" })
+    @ValueSource(strings = { "level", "madam", "saippuakivikauppias" })
     void palindromeReadsSameBackward(String string) {
-        assertEquals(string, isPalindrome(string));
-    }
-
-    private String isPalindrome(String string) {
-        return new StringBuilder(string).reverse().toString();
+        assertTrue(StringUtils.isPalindrome(string));
     }
 
     @ParameterizedTest

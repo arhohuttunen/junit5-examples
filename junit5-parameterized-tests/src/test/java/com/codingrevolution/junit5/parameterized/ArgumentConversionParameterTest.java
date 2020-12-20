@@ -52,4 +52,10 @@ class ArgumentConversionParameterTest {
     void convertWithCustomHexValueAnnotation(int decimal, @HexValue Integer hex) {
         assertEquals(decimal, hex);
     }
+
+    @ParameterizedTest
+    @CsvSource("John Doe")
+    void fallbackStringConversion(Person person) {
+        assertEquals("John Doe", person.getName());
+    }
 }

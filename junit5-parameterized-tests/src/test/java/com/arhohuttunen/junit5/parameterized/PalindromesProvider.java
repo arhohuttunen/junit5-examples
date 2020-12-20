@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class PalindromesProvider implements ArgumentsProvider {
     @Override
-    public Stream<? extends Arguments> provideArguments(ExtensionContext context) throws Exception {
+    public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
         return Stream.of("level", "madam", "saippuakivikauppias").map(Arguments::of);
     }
 }

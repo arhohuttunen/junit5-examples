@@ -23,6 +23,12 @@ class MethodSourceTest {
     }
 
     @ParameterizedTest
+    @MethodSource("com.arhohuttunen.StringsProvider#palindromes")
+    void externalPalindromeMethodSource(String string) {
+        assertTrue(StringUtils.isPalindrome(string));
+    }
+
+    @ParameterizedTest
     @MethodSource
     void monthNames(int month, String name) {
         assertEquals(name, DateUtils.getMonthName(month));

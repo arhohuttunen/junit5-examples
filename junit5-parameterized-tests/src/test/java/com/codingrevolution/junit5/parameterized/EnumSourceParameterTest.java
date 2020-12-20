@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 
 class EnumSourceParameterTest {
 
-    private WebServer webServer = new WebServer();
+    private final WebServer webServer = new WebServer();
 
     @ParameterizedTest
     @EnumSource(Protocol.class)

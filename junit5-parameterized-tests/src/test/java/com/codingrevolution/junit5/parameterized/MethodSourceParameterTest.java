@@ -7,46 +7,32 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class MethodSourceParameterTest {
 
     @ParameterizedTest
     @MethodSource("palindromesProvider")
     void palindromeReadsSameBackward(String string) {
-        assertEquals(string, isPalindrome(string));
-    }
-
-    private String isPalindrome(String string) {
-        return new StringBuilder(string).reverse().toString();
+        assertTrue(StringUtils.isPalindrome(string));
     }
 
     private static Stream<String> palindromesProvider() {
         return Stream.of("racecar", "radar", "able was I ere I saw elba");
     }
 
-    @ParameterizedTest(name = "{index} => arabic={0}, roman={1}")
-    @MethodSource("arabicToRomanProvider")
-    void convertArabicToRomanNumeral(int arabic, String roman) {
-        assertEquals(roman, new RomanNumeral(arabic).toString());
+    @ParameterizedTest
+    @MethodSource
+    void monthNames(int month, String name) {
+        assertEquals(name, DateUtils.getMonthName(month));
     }
 
-    private static Stream<Arguments> arabicToRomanProvider() {
+    private static Stream<Arguments> monthNames() {
         return Stream.of(
-                Arguments.of(1, "I"),
-                Arguments.of(3, "III"),
-                Arguments.of(4, "IV"),
-                Arguments.of(5, "V"),
-                Arguments.of(6, "VI"),
-                Arguments.of(8, "VIII"),
-                Arguments.of(9, "IX"),
-                Arguments.of(10, "X"),
-                Arguments.of(11, "XI"),
-                Arguments.of(14, "XIV"),
-                Arguments.of(15, "XV"),
-                Arguments.of(16, "XVI"),
-                Arguments.of(39, "XXXIX"),
-                Arguments.of(40, "XL"),
-                Arguments.of(50, "L")
+                arguments(1, "January"),
+                arguments(2, "February"),
+                arguments(12, "December")
         );
     }
 }

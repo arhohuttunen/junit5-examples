@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import java.time.LocalDate;
 
-class CsvFileSourceParameterTest {
+class CsvFileSourceTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/tasks.csv", numLinesToSkip = 1)

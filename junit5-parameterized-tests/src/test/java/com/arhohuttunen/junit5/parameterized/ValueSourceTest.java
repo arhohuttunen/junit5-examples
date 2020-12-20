@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ValueSourceParameterTest {
+class ValueSourceTest {
 
     @ParameterizedTest
     @ValueSource(strings = { "level", "madam", "saippuakivikauppias" })

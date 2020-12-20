@@ -3,7 +3,7 @@ package com.arhohuttunen.junit5.parameterized;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
-class EnumSourceParameterTest {
+class EnumSourceTest {
 
     private final WebServer webServer = new WebServer();
 

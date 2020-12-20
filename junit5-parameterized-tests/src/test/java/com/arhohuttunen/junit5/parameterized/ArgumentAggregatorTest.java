@@ -4,7 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class ArgumentAggregatorParameterTest {
+class ArgumentAggregatorTest {
     @ParameterizedTest
     @CsvSource({
         "Write a blog post, IN_PROGRESS, 2020-12-20",

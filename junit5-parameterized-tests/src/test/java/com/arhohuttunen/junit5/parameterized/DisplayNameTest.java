@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-public class DisplayNameParameterTest {
+public class DisplayNameTest {
 
     @ParameterizedTest(name = "{index} => number={0}, month={1}")
     @MethodSource

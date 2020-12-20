@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class RomanNumeral {
 
-    private static Map<Integer, String> NUMERALS;
+    private static final Map<Integer, String> NUMERALS;
 
     static {
         NUMERALS = new LinkedHashMap<>();
@@ -18,15 +18,17 @@ public class RomanNumeral {
         NUMERALS.put(1, "I");
     }
 
-    private String numeral = "";
+    private final String numeral;
 
     public RomanNumeral(int number) {
+        StringBuilder builder = new StringBuilder();
         for (Integer arabic : NUMERALS.keySet()) {
             while (number >= arabic) {
-                numeral += NUMERALS.get(arabic);
+                builder.append(NUMERALS.get(arabic));
                 number -= arabic;
             }
         }
+        numeral = builder.toString();
     }
 
     @Override

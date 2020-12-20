@@ -23,10 +23,8 @@ public class RomanNumeral {
     public RomanNumeral(int number) {
         for (Integer arabic : NUMERALS.keySet()) {
             while (number >= arabic) {
-                if (number >= arabic) {
-                    numeral += NUMERALS.get(arabic);
-                    number -= arabic;
-                }
+                numeral += NUMERALS.get(arabic);
+                number -= arabic;
             }
         }
     }

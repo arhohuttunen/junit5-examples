@@ -19,7 +19,7 @@ class MethodSourceTest {
     }
 
     private static Stream<String> palindromesProvider() {
-        return Stream.of("racecar", "radar", "able was I ere I saw elba");
+        return Stream.of("level", "madam", "saippuakivikauppias");
     }
 
     @ParameterizedTest

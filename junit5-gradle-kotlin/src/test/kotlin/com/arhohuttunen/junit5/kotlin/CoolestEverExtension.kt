@@ -4,12 +4,12 @@ import org.junit.jupiter.api.extension.AfterAllCallback
 import org.junit.jupiter.api.extension.BeforeAllCallback
 import org.junit.jupiter.api.extension.ExtensionContext
 
-class SecondExtension : BeforeAllCallback, AfterAllCallback {
+class CoolestEverExtension : BeforeAllCallback, AfterAllCallback {
     override fun beforeAll(context: ExtensionContext) {
-        println("Before all")
+        println("Coolest ever extension: before all")
     }
 
     override fun afterAll(context: ExtensionContext) {
-        println("After all")
+        println("Coolest ever extension: after all")
     }
 }

@@ -7,8 +7,8 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.extension.Extensions
 
 @Extensions(
-        ExtendWith(FirstExtension::class),
-        ExtendWith(SecondExtension::class)
+        ExtendWith(SecondBestExtension::class),
+        ExtendWith(CoolestEverExtension::class)
 )
 @Tags(
         Tag("fist"),

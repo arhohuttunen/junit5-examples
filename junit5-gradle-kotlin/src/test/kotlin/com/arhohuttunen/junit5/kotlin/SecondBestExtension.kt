@@ -4,12 +4,12 @@ import org.junit.jupiter.api.extension.AfterEachCallback
 import org.junit.jupiter.api.extension.BeforeEachCallback
 import org.junit.jupiter.api.extension.ExtensionContext
 
-class FirstExtension : BeforeEachCallback, AfterEachCallback {
+class SecondBestExtension : BeforeEachCallback, AfterEachCallback {
     override fun beforeEach(context: ExtensionContext) {
-        println("Before each")
+        println("Second best extension - before each")
     }
 
     override fun afterEach(context: ExtensionContext) {
-        println("After each")
+        println("Second best extension - after each")
     }
 }

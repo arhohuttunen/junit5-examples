@@ -10,7 +10,9 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    implementation("org.eclipse.jetty:jetty-servlet:11.0.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
+    testImplementation("org.eclipse.jetty:jetty-server:11.0.0")
 }
 
 tasks.withType<Test> {

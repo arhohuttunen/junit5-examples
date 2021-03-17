@@ -112,6 +112,7 @@ class ProductControllerTest {
             }
 
             @Test
+            @DisplayName("return found product as JSON")
             void returnFoundProductAsJson() throws Exception {
                 Product product = new Product(1L, "Toothbrush", BigDecimal.valueOf(5.0));
                 when(productRepository.findById(1L)).thenReturn(product);

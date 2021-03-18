@@ -48,7 +48,7 @@ public class MoneyTest {
 
     @Nested
     @DisplayName("adding monetary amounts")
-    class Adding {
+    class Addition {
         @Test
         @DisplayName("can add monies of same currency")
         void addMoneyWithSameCurrency() {

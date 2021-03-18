@@ -12,33 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MoneyTest {
     @Nested
-    @DisplayName("adding monetary amounts")
-    class Adding {
-        @Test
-        @DisplayName("can add monies of same currency")
-        void addMoneyWithSameCurrency() {
-            CurrencyUnit eur = CurrencyUnit.of("EUR");
-            Money money = Money.of(eur, 4.25);
-            Money addend = Money.of(eur, 1.4);
-
-            Money sum = money.add(addend);
-
-            assertEquals(BigDecimal.valueOf(5.65), sum.getAmount());
-        }
-
-        @Test
-        @DisplayName("cannot add monies of different currency")
-        void addMoneyWithDifferentCurrency() {
-            CurrencyUnit eur = CurrencyUnit.of("EUR");
-            CurrencyUnit usd = CurrencyUnit.of("USD");
-            Money money = Money.of(eur, 4.25);
-            Money addend = Money.of(usd, 1.4);
-
-            assertThrows(CurrencyMismatchException.class, () -> money.add(addend));
-        }
-    }
-
-    @Nested
     @DisplayName("equality is based on values")
     class Equality {
         @Test
@@ -70,6 +43,33 @@ public class MoneyTest {
             Money second = Money.of(usd, 3.99);
 
             assertNotEquals(second, first);
+        }
+    }
+
+    @Nested
+    @DisplayName("adding monetary amounts")
+    class Adding {
+        @Test
+        @DisplayName("can add monies of same currency")
+        void addMoneyWithSameCurrency() {
+            CurrencyUnit eur = CurrencyUnit.of("EUR");
+            Money money = Money.of(eur, 4.25);
+            Money addend = Money.of(eur, 1.4);
+
+            Money sum = money.add(addend);
+
+            assertEquals(BigDecimal.valueOf(5.65), sum.getAmount());
+        }
+
+        @Test
+        @DisplayName("cannot add monies of different currency")
+        void addMoneyWithDifferentCurrency() {
+            CurrencyUnit eur = CurrencyUnit.of("EUR");
+            CurrencyUnit usd = CurrencyUnit.of("USD");
+            Money money = Money.of(eur, 4.25);
+            Money addend = Money.of(usd, 1.4);
+
+            assertThrows(CurrencyMismatchException.class, () -> money.add(addend));
         }
     }
 }

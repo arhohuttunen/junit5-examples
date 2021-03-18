@@ -35,6 +35,7 @@ class ProductControllerTest {
     private ProductRepository productRepository;
 
     @Nested
+    @DisplayName("Creating a product")
     class Post {
 
         @Nested
@@ -84,6 +85,7 @@ class ProductControllerTest {
     }
 
     @Nested
+    @DisplayName("Finding a product")
     class GetById {
 
         @Nested
@@ -126,6 +128,7 @@ class ProductControllerTest {
     }
 
     @Nested
+    @DisplayName("Deleting a product")
     class Delete {
 
         @Nested

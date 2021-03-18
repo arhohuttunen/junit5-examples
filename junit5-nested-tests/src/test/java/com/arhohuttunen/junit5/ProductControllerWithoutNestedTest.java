@@ -86,7 +86,7 @@ class ProductControllerWithoutNestedTest {
 
     @Test
     @DisplayName("GET returns found product as JSON when product is found")
-    void getReturnsFoundProductAsJson() throws Exception {
+    void getReturnsFoundProductAsJsonWhenProductIsFound() throws Exception {
         Product product = new Product(1L, "Toothbrush", BigDecimal.valueOf(5.0));
         when(productRepository.findById(1L)).thenReturn(product);
 

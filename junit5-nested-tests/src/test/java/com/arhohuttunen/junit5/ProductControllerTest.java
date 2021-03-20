@@ -60,8 +60,7 @@ class ProductControllerTest {
 
                 mockMvc.perform(post("/product")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(product)))
-                        .andExpect(status().isBadRequest());
+                        .content(objectMapper.writeValueAsString(product)));
 
                 verify(productRepository, never()).save(product);
             }

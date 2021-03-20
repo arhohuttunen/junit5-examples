@@ -12,6 +12,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
 
+import static com.arhohuttunen.junit5.ProductBuilder.aProduct;
+import static com.arhohuttunen.junit5.ProductBuilder.anInvalidProduct;
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.never;
@@ -45,24 +47,24 @@ class ProductControllerTest {
             @Test
             @DisplayName("return HTTP status Bad Request")
             void returnHttpStatusBadRequest() throws Exception {
-                Product product = new Product(null, null, null);
+                Product invalidProduct = anInvalidProduct().build();
 
                 mockMvc.perform(post("/product")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(product)))
+                        .content(objectMapper.writeValueAsString(invalidProduct)))
                         .andExpect(status().isBadRequest());
             }
 
             @Test
             @DisplayName("do not create a product")
             void doNotCreateProduct() throws Exception {
-                Product product = new Product(null, null, null);
+                Product invalidProduct = anInvalidProduct().build();
 
                 mockMvc.perform(post("/product")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(product)));
+                        .content(objectMapper.writeValueAsString(invalidProduct)));
 
-                verify(productRepository, never()).save(product);
+                verify(productRepository, never()).save(invalidProduct);
             }
         }
 
@@ -73,7 +75,7 @@ class ProductControllerTest {
             @Test
             @DisplayName("return HTTP status Created")
             void returnHttpStatusCreated() throws Exception {
-                Product product = new Product(1L, "Toothbrush", BigDecimal.valueOf(5.0));
+                Product product = aProduct().withId(1L).withName("Toothbrush").withPrice(5.0).build();
 
                 mockMvc.perform(post("/product")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -94,7 +96,7 @@ class ProductControllerTest {
             @Test
             @DisplayName("return HTTP status Not Found")
             void returnHttpStatusNotFound() throws Exception {
-                doThrow(new ProductNotFoundException()).when(productRepository).findById(1L);
+                missingProduct(1L);
 
                 mockMvc.perform(get("/product/{productId}", 1L))
                         .andExpect(status().isNotFound());
@@ -108,6 +110,8 @@ class ProductControllerTest {
             @Test
             @DisplayName("return HTTP status OK")
             void returnHttpStatusOk() throws Exception {
+                havingPersisted(aProduct().withId(1L));
+
                 mockMvc.perform(get("/product/{productId}", 1L))
                         .andExpect(status().isOk());
             }
@@ -115,8 +119,7 @@ class ProductControllerTest {
             @Test
             @DisplayName("return found product as JSON")
             void returnFoundProductAsJson() throws Exception {
-                Product product = new Product(1L, "Toothbrush", BigDecimal.valueOf(5.0));
-                when(productRepository.findById(1L)).thenReturn(product);
+                havingPersisted(aProduct().withId(1L).withName("Toothbrush").withPrice(5.0));
 
                 mockMvc.perform(get("/product/{productId}", 1L))
                         .andExpect(jsonPath("$.id", is(1)))
@@ -137,7 +140,7 @@ class ProductControllerTest {
             @Test
             @DisplayName("return HTTP status Not Found")
             void returnHttpStatusNotFound() throws Exception {
-                doThrow(new ProductNotFoundException()).when(productRepository).deleteById(1L);
+                missingProductToDelete(1L);
 
                 mockMvc.perform(delete("/product/{productId}", 1L))
                         .andExpect(status().isNotFound());
@@ -155,5 +158,18 @@ class ProductControllerTest {
                         .andExpect(status().isNoContent());
             }
         }
+    }
+
+    void havingPersisted(ProductBuilder builder) {
+        Product product = builder.build();
+        when(productRepository.findById(product.getId())).thenReturn(product);
+    }
+
+    void missingProduct(Long id) {
+        doThrow(new ProductNotFoundException()).when(productRepository).findById(id);
+    }
+
+    void missingProductToDelete(Long id) {
+        doThrow(new ProductNotFoundException()).when(productRepository).deleteById(id);
     }
 }

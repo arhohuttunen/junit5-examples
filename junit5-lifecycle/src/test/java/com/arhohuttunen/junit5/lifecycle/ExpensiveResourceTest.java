@@ -28,7 +28,7 @@ public class ExpensiveResourceTest {
 
     @Test
     void checkServerStatus() throws IOException {
-        URL url = new URL("http://localhost:8080/status");
+        URL url = jettyServer.getURI().resolve("/status").toURL();
         HttpURLConnection connection =
                 (HttpURLConnection) url.openConnection();
         int response = connection.getResponseCode();
@@ -38,7 +38,7 @@ public class ExpensiveResourceTest {
 
     @Test
     void checkInvalidEndpoint() throws IOException {
-        URL url = new URL("http://localhost:8080/invalid");
+        URL url = jettyServer.getURI().resolve("/invalid").toURL();
         HttpURLConnection connection =
                 (HttpURLConnection) url.openConnection();
         int response = connection.getResponseCode();

@@ -5,6 +5,8 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
+import java.net.URI;
+
 public class JettyServer {
     private Server server;
 
@@ -12,7 +14,7 @@ public class JettyServer {
         server = new Server();
 
         ServerConnector connector = new ServerConnector(server);
-        connector.setPort(8080);
+        connector.setPort(0);
         server.setConnectors(new Connector[] { connector });
 
         ServletContextHandler context = new ServletContextHandler();
@@ -21,6 +23,10 @@ public class JettyServer {
         server.setHandler(context);
 
         server.start();
+    }
+
+    public URI getURI() {
+        return server.getURI();
     }
 
     public void stop() throws Exception {

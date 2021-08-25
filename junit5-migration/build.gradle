@@ -24,6 +24,6 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-context', version: '5.3.9'
     testImplementation group: 'org.springframework', name: 'spring-test', version: '5.3.9'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.12.2'
-    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.12.2'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.12.3'
     testImplementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '11.0.6'
 }

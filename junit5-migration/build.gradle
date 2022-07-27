@@ -17,7 +17,7 @@ test {
 }
 
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.8.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.9.0'
     // Needed for supporting a subset of JUnit 4 rules
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-migrationsupport', version: '5.8.2'
     testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.8.2'

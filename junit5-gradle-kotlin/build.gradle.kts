@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.21"
+    kotlin("jvm") version "1.7.21"
 }
 
 repositories {
@@ -10,9 +10,9 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("org.eclipse.jetty:jetty-servlet:11.0.9")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
-    testImplementation("org.eclipse.jetty:jetty-server:11.0.9")
+    implementation("org.eclipse.jetty:jetty-servlet:11.0.12")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
+    testImplementation("org.eclipse.jetty:jetty-server:11.0.12")
 }
 
 tasks.withType<Test> {

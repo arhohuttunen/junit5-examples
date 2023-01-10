@@ -14,5 +14,5 @@ repositories {
 }
 
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.9.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.9.2'
 }

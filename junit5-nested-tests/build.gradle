@@ -5,8 +5,10 @@ plugins {
 group 'com.arhohuttunen'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-targetCompatibility = '17'
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = '17'
+}
 
 test {
     useJUnitPlatform()

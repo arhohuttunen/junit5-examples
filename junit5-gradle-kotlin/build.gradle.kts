@@ -13,6 +13,7 @@ dependencies {
     implementation("org.eclipse.jetty:jetty-servlet:11.0.12")
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
     testImplementation("org.eclipse.jetty:jetty-server:11.0.12")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {

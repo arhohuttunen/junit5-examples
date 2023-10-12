@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class JettyServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+    protected void service(HttpServletRequest req, HttpServletResponse resp) {
         resp.setStatus(HttpServletResponse.SC_OK);
     }
 }

@@ -18,12 +18,3 @@ updates:
         update-types:
           - "minor"
           - "patch"
-  - package-ecosystem: "gradle"
-    directory: "/junit-5-gradle-kotlin/"
-    schedule:
-      interval: "daily"
-    groups:
-      minor-and-patch-dependencies:
-        update-types:
-          - "minor"
-          - "patch"

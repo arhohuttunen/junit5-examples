@@ -22,7 +22,7 @@ test {
 dependencies {
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.10.0'
     // Needed for supporting a subset of JUnit 4 rules
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-migrationsupport', version: '5.10.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-migrationsupport', version: '5.10.1'
     testRuntimeOnly group: 'org.junit.platform', name: 'junit-platform-launcher'
     testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.10.0'
     implementation group: 'org.springframework', name: 'spring-context', version: '6.0.13'

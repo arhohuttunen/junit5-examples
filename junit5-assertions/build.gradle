@@ -20,5 +20,5 @@ dependencies {
     testRuntimeOnly group: 'org.junit.platform', name: 'junit-platform-launcher'
     testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
     testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.25.3'
-    testImplementation group: 'com.google.truth', name: 'truth', version: '1.4.1'
+    testImplementation group: 'com.google.truth', name: 'truth', version: '1.4.2'
 }

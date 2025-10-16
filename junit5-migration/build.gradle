@@ -25,9 +25,9 @@ dependencies {
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-migrationsupport', version: '5.13.4'
     testRuntimeOnly group: 'org.junit.platform', name: 'junit-platform-launcher'
     testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.13.4'
-    implementation group: 'org.springframework', name: 'spring-context', version: '6.2.11'
-    testImplementation group: 'org.springframework', name: 'spring-test', version: '6.2.11'
+    implementation group: 'org.springframework', name: 'spring-context', version: '6.2.12'
+    testImplementation group: 'org.springframework', name: 'spring-test', version: '6.2.12'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.20.0'
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.20.0'
-    testImplementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '12.1.1'
+    testImplementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '12.1.2'
 }

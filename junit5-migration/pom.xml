@@ -32,14 +32,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.13.4</version>
+            <version>5.14.1</version>
             <scope>test</scope>
         </dependency>
         <!--Needed for supporting a subset of JUnit 4 rules-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-migrationsupport</artifactId>
-            <version>5.13.4</version>
+            <version>5.14.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -74,7 +74,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>12.1.4</version>
+            <version>12.1.5</version>
         </dependency>
     </dependencies>
 

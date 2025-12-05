@@ -18,6 +18,9 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    ignore:
+      - dependency-name: "org.junit.jupiter:"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "gradle"
     directory: "/junit-5-gradle-kotlin/"
     schedule:
@@ -27,3 +30,6 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    ignore:
+      - dependency-name: "org.junit.jupiter:"
+        update-types: ["version-update:semver-major"]

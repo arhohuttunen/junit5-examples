@@ -13,9 +13,10 @@ public class JettyServer {
     public void start() throws Exception {
         server = new Server();
 
-        ServerConnector connector = new ServerConnector(server);
-        connector.setPort(0);
-        server.setConnectors(new Connector[] { connector });
+        try (ServerConnector connector = new ServerConnector(server)) {
+            connector.setPort(0);
+            server.setConnectors(new Connector[]{connector});
+        }
 
         ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");

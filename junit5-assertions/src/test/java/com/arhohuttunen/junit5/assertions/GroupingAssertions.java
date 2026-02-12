@@ -12,8 +12,8 @@ class GroupingAssertions {
         Person person = new Person("John", "Doe");
 
         assertAll("person",
-                () -> assertEquals("John", person.getFirstName()),
-                () -> assertEquals("Doe", person.getLastName())
+                () -> assertEquals("John", person.firstName()),
+                () -> assertEquals("Doe", person.lastName())
         );
     }
 }

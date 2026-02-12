@@ -9,6 +9,6 @@ class NullAssertion {
     @Test
     void personHasFirstName() {
         Person person = new Person("John", "Doe");
-        assertNotNull(person.getFirstName());
+        assertNotNull(person.firstName());
     }
 }

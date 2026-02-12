@@ -9,6 +9,6 @@ class BooleanAssertion {
     @Test
     void firstNameStartsWithJ() {
         Person person = new Person("John", "Doe");
-        assertTrue(person.getFirstName().startsWith("J"));
+        assertTrue(person.firstName().startsWith("J"));
     }
 }

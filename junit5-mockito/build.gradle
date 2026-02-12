@@ -2,11 +2,13 @@ plugins {
     id 'java'
 }
 
-group 'com.arhohuttunen'
-version '1.0-SNAPSHOT'
+group = 'com.arhohuttunen'
+version = '1.0-SNAPSHOT'
 
-compileJava {
-    sourceCompatibility = 1.8
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 test {
@@ -21,8 +23,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.14.2'
-    testRuntimeOnly group: 'org.junit.platform', name: 'junit-platform-launcher'
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.21.0'
-    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.21.0'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.14.2')
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
+    testImplementation('org.mockito:mockito-core:5.21.0')
+    testImplementation('org.mockito:mockito-junit-jupiter:5.21.0')
 }

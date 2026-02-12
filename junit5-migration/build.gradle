@@ -1,7 +1,6 @@
-group = 'com.arhohuttunen'
-version = '1.0-SNAPSHOT'
-
-apply plugin: 'java'
+plugins {
+    id('java')
+}
 
 java {
     toolchain {

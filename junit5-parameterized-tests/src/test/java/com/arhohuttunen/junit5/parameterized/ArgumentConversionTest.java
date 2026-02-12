@@ -56,6 +56,6 @@ class ArgumentConversionTest {
     @ParameterizedTest
     @CsvSource("John Doe")
     void fallbackStringConversion(Person person) {
-        assertEquals("John Doe", person.getName());
+        assertEquals("John Doe", person.name());
     }
 }

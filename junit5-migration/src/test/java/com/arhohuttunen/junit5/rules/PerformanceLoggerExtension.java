@@ -10,13 +10,13 @@ public class PerformanceLoggerExtension implements BeforeEachCallback, AfterEach
     private String testName;
 
     @Override
-    public void beforeEach(ExtensionContext context) throws Exception {
+    public void beforeEach(ExtensionContext context) {
         testStart = System.currentTimeMillis();
         testName = context.getDisplayName();
     }
 
     @Override
-    public void afterEach(ExtensionContext context) throws Exception {
+    public void afterEach(ExtensionContext context) {
         System.out.printf("%s executed in %d ms\n",
                 testName, (System.currentTimeMillis() - testStart));
     }

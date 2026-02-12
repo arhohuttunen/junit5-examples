@@ -23,11 +23,11 @@ repositories {
 }
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-web:3.5.7')
-    implementation('org.springframework.boot:spring-boot-starter-validation:3.5.7')
+    implementation('org.springframework.boot:spring-boot-starter-web:3.5.10')
+    implementation('org.springframework.boot:spring-boot-starter-validation:3.5.10')
     testImplementation('org.junit.jupiter:junit-jupiter:5.14.2')
     testRuntimeOnly('org.junit.platform:junit-platform-launcher')
-    testImplementation('org.springframework.boot:spring-boot-starter-test:3.5.7')
+    testImplementation('org.springframework.boot:spring-boot-starter-test:3.5.10')
 }
 
 tasks.withType(JavaCompile).configureEach {

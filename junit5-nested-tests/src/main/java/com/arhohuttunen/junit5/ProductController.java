@@ -27,14 +27,14 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public Product getProduct(@PathVariable("id") Long id) {
+    public Product getProduct(@PathVariable Long id) {
         return productRepository.findById(id);
     }
 
 
     @DeleteMapping("/product/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteProduct(@PathVariable("id") Long id) {
+    public void deleteProduct(@PathVariable Long id) {
         productRepository.deleteById(id);
     }
 }

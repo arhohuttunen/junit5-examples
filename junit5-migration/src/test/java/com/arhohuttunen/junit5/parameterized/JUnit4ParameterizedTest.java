@@ -19,8 +19,8 @@ public class JUnit4ParameterizedTest {
         });
     }
 
-    private int input;
-    private int expected;
+    private final int input;
+    private final int expected;
 
     public JUnit4ParameterizedTest(int input, int expected) {
         this.input = input;

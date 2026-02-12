@@ -1,10 +1,12 @@
-group 'com.arhohuttunen'
-version '1.0-SNAPSHOT'
+group = 'com.arhohuttunen'
+version = '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-compileJava {
-    sourceCompatibility = 1.8
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 test {
@@ -19,6 +21,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.14.2'
-    testRuntimeOnly group: 'org.junit.platform', name: 'junit-platform-launcher'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.14.2')
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
 }

@@ -2,12 +2,13 @@ plugins {
     id 'java'
 }
 
-group 'com.arhohuttunen'
-version '1.0-SNAPSHOT'
+group = 'com.arhohuttunen'
+version = '1.0-SNAPSHOT'
 
-compileJava {
-    sourceCompatibility = 1.8
-    targetCompatibility = '17'
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 test {
@@ -22,9 +23,9 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.5.7'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.5.7'
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.14.2'
-    testRuntimeOnly group: 'org.junit.platform', name: 'junit-platform-launcher'
-    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '3.5.7'
+    implementation('org.springframework.boot:spring-boot-starter-web:3.5.7')
+    implementation('org.springframework.boot:spring-boot-starter-validation:3.5.7')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.14.2')
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
+    testImplementation('org.springframework.boot:spring-boot-starter-test:3.5.7')
 }

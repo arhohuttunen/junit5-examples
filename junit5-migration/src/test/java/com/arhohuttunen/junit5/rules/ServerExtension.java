@@ -6,7 +6,7 @@ import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
 public class ServerExtension implements BeforeAllCallback, AfterAllCallback {
-    private Server server = new Server(9000);
+    private final Server server = new Server(9000);
 
     public Server getServer() {
         return server;

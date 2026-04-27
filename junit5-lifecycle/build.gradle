@@ -22,6 +22,6 @@ repositories {
 dependencies {
     implementation('org.eclipse.jetty:jetty-server:12.1.8')
     implementation('org.eclipse.jetty.ee10:jetty-ee10-servlet:12.1.8')
-    testImplementation('org.junit.jupiter:junit-jupiter:5.14.3')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.14.4')
     testRuntimeOnly('org.junit.platform:junit-platform-launcher')
 }

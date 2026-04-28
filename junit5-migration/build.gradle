@@ -20,11 +20,11 @@ test {
 }
 
 dependencies {
-    testImplementation('org.junit.jupiter:junit-jupiter:5.14.3')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.14.4')
     // Needed for supporting a subset of JUnit 4 rules
-    testImplementation('org.junit.jupiter:junit-jupiter-migrationsupport:5.14.3')
+    testImplementation('org.junit.jupiter:junit-jupiter-migrationsupport:5.14.4')
     testRuntimeOnly('org.junit.platform:junit-platform-launcher')
-    testRuntimeOnly('org.junit.vintage:junit-vintage-engine:5.14.3')
+    testRuntimeOnly('org.junit.vintage:junit-vintage-engine:5.14.4')
     implementation('org.springframework:spring-context:6.2.18')
     testImplementation('org.springframework:spring-test:6.2.18')
     testImplementation('org.mockito:mockito-core:5.23.0')
